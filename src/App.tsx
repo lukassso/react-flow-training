@@ -1,5 +1,4 @@
-import './App.css'
-import {addEdge, ReactFlow, useEdgesState, useNodesState} from "reactflow";
+import {addEdge, Background, Controls, MiniMap, ReactFlow, useEdgesState, useNodesState} from "reactflow";
 
 import 'reactflow/dist/style.css';
 import {useCallback} from "react";
@@ -24,7 +23,11 @@ function App() {
                 onNodesChange={onNodesChange}
                 onEdgesChange={onEdgesChange}
                 onConnect={onConnect}
-            />
+            >
+                <Controls />
+                <MiniMap />
+                <Background gap={12} size={1} />
+            </ReactFlow>
         </div>
     );
 }
